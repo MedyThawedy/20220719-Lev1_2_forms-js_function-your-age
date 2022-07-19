@@ -12,17 +12,10 @@
 <body>
     <div>
         <div>
-            <div>
-                <label> Age1! </label>
-                <input type="number" placeholder="Your age Please!" id="inputAge1">
-            </div>
-            <div>
-                <label> Age2! </label>
-                <input type="number" placeholder="Your age Please!" id="inputAge2">
-            </div>
-            <input type="button" value="Compare!" id="btnComparison" onclick="fnCompareAge()">
-
-            <h2 id="divComparisonOutput"></h2>
+            <label for=""> Please Enter your birthday! </label>
+            <input type="date" placeholder="Your birtday please!" id="inputBirthday">
+            <input type="button" value="Calculate!" id="btnCalculation" onclick="fnCalculateAge()">
+            <h2 id="divAge"></h2>
             <script src="./assets/js/main.js"></script>
         </div>
     </div>

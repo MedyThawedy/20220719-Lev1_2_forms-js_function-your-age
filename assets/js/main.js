@@ -1,21 +1,15 @@
+function fnCalculateAge() {
 
+    let birthday = document.getElementById('inputBirthday').value;
+    let date_birthday = new Date(birthday);
+    console.log(birthday);
 
-function fnCompareAge() {
+    let differenceBetweenNowAndBirthday = (Date.now() - date_birthday.getTime());
+    let age = new Date(differenceBetweenNowAndBirthday);
 
-    let age1 = document.getElementById('inputAge1').value;
-    let age2 = document.getElementById('inputAge2').value;
+    // ??? https://www.w3resource.com/javascript-exercises/javascript-date-exercise-18.php
+    let ageOutput = Math.abs(age.getUTCFullYear() - 1970);
+    console.log(ageOutput);
 
-    if (age1 > age2) {
-        console.log(age1 + ' is older than ' + age2);
-        document.getElementById('divComparisonOutput').innerHTML = age1 + ' is older than ' + age2;
-    } else if (age1 < age2) {
-        console.log(age1 + ' is younger than ' + age2);
-        document.getElementById('divComparisonOutput').innerHTML = age1 + ' is younger than ' + age2;
-    } else {
-        console.log(age1 + ' = ' + age2);
-        document.getElementById('divComparisonOutput').innerHTML = age1 + ' = ' + age2;
-    }
-
-
+    document.getElementById('divAge').innerHTML = 'Your are ' + ageOutput + ' years old!';
 }
-
